@@ -24,7 +24,7 @@ for symbol in all_symbols:
         df.loc[df["symbol_type"] == symbol, "max_limit_orders"])
     min_v = min(
         df.loc[df["symbol_type"] == symbol, "max_limit_orders"])
-    print("symbol%s max %s min %s diff %s" %
+    print("symbol %s max %s min %s diff %s" %
           (symbol, max_v, min_v, max_v - min_v))
     mapping_dict[symbol] = max_v
 print(mapping_dict)
